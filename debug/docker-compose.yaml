@@ -1,0 +1,11 @@
+version: "3.0"
+services:
+  debug-back:
+    build:
+      context: ../.
+      dockerfile: debug/Dockerfile
+    ports:
+      - "8000:8000"
+      - "30000:9229"
+    volumes:
+      - ../src:/app/src
