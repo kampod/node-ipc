@@ -1,8 +1,8 @@
 import { IPC_CONFIG } from './config';
 import { VServer } from './services/ipc/v-server';
 
-async function start(): Promise<void> {
-  console.log(`\nConfig: ${JSON.stringify(IPC_CONFIG)}`);
+async function startServer(): Promise<void> {
+  console.log(`\nConfig server: ${JSON.stringify(IPC_CONFIG)}`);
   const vServer = new VServer(
     IPC_CONFIG.serverId,
     IPC_CONFIG.encoding,
@@ -15,4 +15,4 @@ async function start(): Promise<void> {
   vServer.startServer();
 }
 
-start();
+startServer();
